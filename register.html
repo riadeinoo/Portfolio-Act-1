@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Atlas Dev Days</title>
+    <meta name="description" content="Register for Atlas Dev Days, 21 and 22 October 2027 in Marrakech.">
+    <meta name="theme-color" content="#0d0d11">
+    <link rel="icon" type="image/png" href="images/jbell.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Register - Atlas Dev Days">
+    <meta property="og:description" content="Register for Atlas Dev Days, 21 and 22 October 2027 in Marrakech.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <span class="brand-text">Atlas Dev Days</span>
+                <img src="images/jbell.png" alt="" class="brand-icon-img" width="40" height="40">
+            </a>
+            <div class="nav-right">
+                <ul class="nav-menu"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="schedule.html" class="nav-link">Schedule</a></li><li><a href="speakers.html" class="nav-link">Speakers</a></li><li><a href="case-study.html" class="nav-link">Case study</a></li></ul>
+                <a href="register.html" class="btn-subscribe">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-content" id="main">
+        <div class="card form-card">
+            <p class="date">21-22 October 2027 &middot; Marrakech</p>
+            <h1 class="page-title">Register</h1>
+            <p class="form-note">This is a fictional event and a demo form. Nothing you type is stored or sent.</p>
+            <form action="#" method="post" class="registration-form" data-endpoint="">
+
+                <div class="form-group">
+                    <label for="fullname">Full name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Smith" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="jane.smith@email.com" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Expected format: name@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+212612345678" autocomplete="tel" inputmode="tel" pattern="(\+212|0)[5-7][0-9]{8}" title="Expected format: +212612345678 or 0612345678" required>
+                </div>
+
+                <fieldset class="form-group day-fieldset">
+                    <legend>Which days will you attend?</legend>
+                    <div class="day-selector">
+                        <label class="radio-card">
+                            <input type="radio" name="attendance" value="thursday" required>
+                            <span class="radio-content"><strong>Thursday</strong><small>21 Oct</small></span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="attendance" value="friday">
+                            <span class="radio-content"><strong>Friday</strong><small>22 Oct</small></span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="attendance" value="both" checked>
+                            <span class="radio-content"><strong>Both days</strong><small>21 &amp; 22 Oct</small></span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group consent">
+                    <label class="checkbox-label" for="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span>I agree that my details may be used to manage my registration.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2027 Atlas Dev Association &middot; Fictional event, portfolio project</p>
+    </footer>
+</body>
+</html>

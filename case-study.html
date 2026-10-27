@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case study - Atlas Dev Days</title>
+    <meta name="description" content="How the Atlas Dev Days site was built: goals, design decisions, problems along the way and what comes next.">
+    <meta name="theme-color" content="#0d0d11">
+    <link rel="icon" type="image/png" href="images/jbell.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Case study - Atlas Dev Days">
+    <meta property="og:description" content="How the Atlas Dev Days site was built: goals, design decisions, problems along the way and what comes next.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <span class="brand-text">Atlas Dev Days</span>
+                <img src="images/jbell.png" alt="" class="brand-icon-img" width="40" height="40">
+            </a>
+            <div class="nav-right">
+                <ul class="nav-menu"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="schedule.html" class="nav-link">Schedule</a></li><li><a href="speakers.html" class="nav-link">Speakers</a></li><li><a href="case-study.html" class="nav-link" aria-current="page">Case study</a></li></ul>
+                <a href="register.html" class="btn-subscribe">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-content" id="main">
+        <article class="card case-card">
+            <h1 class="page-title">Case study</h1>
+            <dl class="facts">
+                <div><dt>Role</dt><dd>Design and development, solo</dd></div>
+                <div><dt>Stack</dt><dd>HTML5, CSS3, vanilla JavaScript</dd></div>
+                <div><dt>Constraints</dt><dd>No framework, no dependencies, no build step</dd></div>
+            </dl>
+            <h2>Goal</h2>
+            <p>Build the site for a made-up web conference that has two jobs: inform people (schedule, speakers) and get them to sign up. It had to work on a phone as well as a laptop, and I wanted to do it with nothing but the platform.</p>
+            <h2>Design decisions</h2>
+            <ul>
+                <li><strong>A tiny set of tokens.</strong> Five colours and one typeface, all CSS custom properties, so every page stays consistent without extra effort.</li>
+                <li><strong>Frosted glass over a photo.</strong> The background blur keeps text readable on a busy image.</li>
+                <li><strong>Progressive enhancement.</strong> With JavaScript off, both days of the schedule are listed one after the other and the form still validates natively.</li>
+            </ul>
+            <h2>What was tricky</h2>
+            <ul>
+                <li>Making the custom radio cards fully usable by keyboard while hiding the native inputs.</li>
+                <li>Replacing a scrolling schedule with accessible tabs: ARIA roles, arrow keys, Home and End.</li>
+                <li>Keeping the countdown correct before, during and after the event, without a screen reader announcing it every minute.</li>
+            </ul>
+            <h2>What I'd do next</h2>
+            <ul>
+                <li>A French version, with <code>hreflang</code> alternates.</li>
+                <li>WebP/AVIF images with <code>srcset</code>.</li>
+                <li>An <code>.ics</code> download for each talk.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2027 Atlas Dev Association &middot; Fictional event, portfolio project</p>
+    </footer>
+</body>
+</html>
